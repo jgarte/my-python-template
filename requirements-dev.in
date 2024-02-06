@@ -1,0 +1,10 @@
+pex
+mypy
+pudb
+pytest-pudb
+pytest
+coverage
+covdefaults
+ruff
+isort
+black
