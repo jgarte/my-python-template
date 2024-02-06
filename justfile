@@ -12,16 +12,16 @@ install:
     pipx install -e .
 
 pex:
-    pex pex --requirement requirements.txt --executable isthmus.py --output-file ~/.bin/isthmus
+    pex pex --requirement requirements.txt --executable {{project_name}}.py --output-file ~/.bin/{{project_name}}
 
 fmt:
-    ruff format isthmus.py
+    ruff format {{project_name}}.py
 
 run:
-    python isthmus.py
+    python {{project_name}}.py
 
 dbg:
-    pudb isthmus.py
+    pudb {{project_name}}.py
 
 @upgrade-package pkg:
     pip-compile --upgrade-package {{pkg}}
